@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basicauth-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: index
+  template:
+    metadata:
+      labels:
+        app: index
+    spec:
+      containers:
+      - name: basicauth-index-container
+        image: index:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: basicauth-service
+spec:
+  selector:
+    app: index
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
