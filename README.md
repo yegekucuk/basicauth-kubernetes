@@ -16,9 +16,11 @@ This repository contains a basic authentication application configured to run on
 Clone the repository:
 ```sh
 # Clone
-git clone https://github.com/yourusername/task-basic-auth.git
+git clone https://github.com/yegekucuk/basicauth-kubernetes.git
+
+# Change working directory
+cd basicauth-kubernetes
 ```
-or you can download the project as a ZIP and extract the files.
 
 #### Start Minikube
 To start Minikube, use the following command:
