@@ -13,26 +13,21 @@ This repository contains a basic authentication application configured to run on
 
 ### Running
 #### Fetch files
-Clone the repository:
+Clone the repository and change the working directory to the cloned repository:
 ```sh
-# Clone
 git clone https://github.com/yegekucuk/basicauth-kubernetes.git
-
-# Change working directory
 cd basicauth-kubernetes
 ```
 
 #### Start Minikube
 To start Minikube, use the following command:
 ```sh
-# Start Minikube
 minikube start
 ```
 
 #### Enable Ingress
 Enable the Ingress addon in Minikube:
 ```sh
-# Enable Ingress
 minikube addons enable ingress
 ```
 
@@ -41,21 +36,18 @@ If you encounter any errors, ensure that your Minikube is up to date and that yo
 #### Build the Authentication File
 You can either use the provided `auth` file or create your own. To create your own `auth` file, use the following command:
 ```sh
-# Create the auth file
 htpasswd -c auth <your-username>
 ```
 
 #### Create Kubernetes Secret
 Use the `auth` file to create a Kubernetes secret:
 ```sh
-# Create Kubernetes secret
 kubectl create secret generic basicauth-secret --from-file=auth
 ```
 
 #### Deploy the Application
 Apply the deployment configuration:
 ```sh
-# Apply deployment configuration
 kubectl apply -f basicauth-deploy.yaml
 ```
 
