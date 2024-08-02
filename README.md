@@ -1,7 +1,7 @@
 # Basic Authentication App
 
 ## Introduction
-This repository contains a basic authentication application configured to run on the domain `local.basicauthtest.com` using Kubernetes and Minikube. When the user locates to the domain the browser asks the user username and password to log in. After logging in, the user will see an plain index with a placeholder text.
+This repository contains a basic authentication application configured to run on the domain `local.basicauthtest.com` using Kubernetes and Minikube. When the user nagivates to the domain the browser asks the user username and password to log in. After logging in, the user will see an plain index with a placeholder text.
 
 ## Installation
 ### Requirements
